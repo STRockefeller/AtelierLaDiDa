@@ -152,6 +152,7 @@
             this.btnReadMe.TabIndex = 11;
             this.btnReadMe.Text = "Read Me";
             this.btnReadMe.UseVisualStyleBackColor = true;
+            this.btnReadMe.Visible = false;
             this.btnReadMe.Click += new System.EventHandler(this.btnReadMe_Click);
             // 
             // FrmBase

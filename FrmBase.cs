@@ -107,7 +107,7 @@ namespace AtelierLaDiDa
         private void btnReadMe_Click(object sender, EventArgs e)
         {
             string message="";
-            message += "2020/8/6 初版說明\r\n此軟體會放上Github歡迎自由修改，如有C#能手能夠加以指教更是再好不過。\r\n目前版本包含A17中文版物品的特性轉移計算，資料庫源自巴哈試算表，計算僅到第二層，路徑並未考慮特性是否可加在該類型物品上。";
+            message += "";
             MessageBox.Show(message, "Read Me");
         }
     }
