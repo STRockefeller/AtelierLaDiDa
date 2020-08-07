@@ -1,4 +1,5 @@
 #About Atelier LaDiDa
+
 ##Abstract
 這個軟體是為了輔助鍊金術士(アトリエ)系列遊戲所撰。
 軟體用於計算物品調和路徑，適合用於
