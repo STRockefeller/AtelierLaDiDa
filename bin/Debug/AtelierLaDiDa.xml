@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AtelierLaDiDa</name>
+    </assembly>
+    <members>
+        <member name="T:AtelierLaDiDa.DataBases.A17DB">
+            <summary>
+            A17資料庫類別
+            </summary>
+        </member>
+        <member name="F:AtelierLaDiDa.DataBases.A17DB.dBPath">
+            <summary>
+            資料庫路徑
+            </summary>
+        </member>
+        <member name="F:AtelierLaDiDa.DataBases.A17DB.connectionString">
+            <summary>
+            連線路徑
+            </summary>
+        </member>
+        <member name="F:AtelierLaDiDa.DataBases.A17DB.connection">
+            <summary>
+            連線物件
+            </summary>
+        </member>
+        <member name="F:AtelierLaDiDa.DataBases.A17DB.objectList">
+            <summary>
+            物品清單
+            </summary>
+        </member>
+        <member name="M:AtelierLaDiDa.DataBases.A17DB.#ctor">
+            <summary>
+            建構式，連線建立
+            </summary>
+        </member>
+        <member name="M:AtelierLaDiDa.DataBases.A17DB.generateObjectList">
+            <summary>
+            生成物品清單
+            </summary>
+            <returns>物品清單</returns>
+        </member>
+        <member name="M:AtelierLaDiDa.DataBases.A17DB.search(System.String,System.String)">
+            <summary>
+            特性轉移路徑查詢
+            </summary>
+            <param name="sourceItem"></param>
+            <param name="destinationItem"></param>
+        </member>
+        <member name="M:AtelierLaDiDa.DataBases.A17DB.seperateSource(System.String)">
+            <summary>
+            原料類別拆解
+            </summary>
+            <param name="itemName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtelierLaDiDa.DataBases.A17DB.seperateDestination(System.String)">
+            <summary>
+            目標物原料拆解
+            </summary>
+            <param name="itemName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtelierLaDiDa.DataBases.A17DB.searchIngredient(System.String)">
+            <summary>
+            查詢原料的原料名稱
+            </summary>
+            <param name="itemNameOrType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtelierLaDiDa.DataBases.A17DB.clearItemName(System.Collections.Generic.List{System.String})">
+            <summary>
+            將List中無法製作的物品排除
+            </summary>
+            <param name="ItemName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtelierLaDiDa.DataBases.A17DB.testDB">
+            <summary>
+            測試用
+            </summary>
+        </member>
+        <member name="F:AtelierLaDiDa.DataBases.A21DB.dBPath">
+            <summary>
+            資料庫路徑
+            </summary>
+        </member>
+        <member name="F:AtelierLaDiDa.DataBases.A21DB.connectionString">
+            <summary>
+            連線路徑
+            </summary>
+        </member>
+        <member name="F:AtelierLaDiDa.DataBases.A21DB.connection">
+            <summary>
+            連線物件
+            </summary>
+        </member>
+        <member name="F:AtelierLaDiDa.DataBases.A21DB.objectList">
+            <summary>
+            物品清單
+            </summary>
+        </member>
+        <member name="M:AtelierLaDiDa.DataBases.A21DB.#ctor">
+            <summary>
+            建構式，連線建立
+            </summary>
+        </member>
+        <member name="M:AtelierLaDiDa.DataBases.A21DB.generateObjectList">
+            <summary>
+            生成物品清單
+            </summary>
+            <returns>物品清單</returns>
+        </member>
+        <member name="M:AtelierLaDiDa.DataBases.A21DB.search(System.String,System.String)">
+            <summary>
+            特性轉移路徑查詢
+            </summary>
+            <param name="sourceItem"></param>
+            <param name="destinationItem"></param>
+        </member>
+        <member name="M:AtelierLaDiDa.DataBases.A21DB.seperateSource(System.String)">
+            <summary>
+            原料類別拆解
+            </summary>
+            <param name="itemName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtelierLaDiDa.DataBases.A21DB.seperateDestination(System.String)">
+            <summary>
+            目標物原料拆解
+            </summary>
+            <param name="itemName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtelierLaDiDa.DataBases.A21DB.searchIngredient(System.String)">
+            <summary>
+            查詢原料的原料名稱
+            </summary>
+            <param name="itemNameOrType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtelierLaDiDa.DataBases.A21DB.clearItemName(System.Collections.Generic.List{System.String})">
+            <summary>
+            將List中無法製作的物品排除
+            </summary>
+            <param name="ItemName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AtelierLaDiDa.EnumSeriesName">
+            <summary>
+            系列名列舉
+            </summary>
+        </member>
+        <member name="F:AtelierLaDiDa.EnumSeriesName.A17_Atelier_Sophie">
+            <summary>
+            ソフィーのアトリエ ～不思議な本の錬金術士～
+            </summary>
+        </member>
+        <member name="F:AtelierLaDiDa.EnumSeriesName.A18_Atelier_Firis">
+            <summary>
+            フィリスのアトリエ ～不思議な旅の錬金術士～
+            </summary>
+        </member>
+        <member name="F:AtelierLaDiDa.EnumSeriesName.A19_Atelier_Lydie_and_Suelle">
+            <summary>
+            リディー＆スールのアトリエ ～不思議な絵画の錬金術士～
+            </summary>
+        </member>
+        <member name="F:AtelierLaDiDa.EnumSeriesName.A20_Atelier_Lulua">
+            <summary>
+            ルルアのアトリエ ～アーランドの錬金術士 4～
+            </summary>
+        </member>
+        <member name="F:AtelierLaDiDa.EnumSeriesName.A21_Atelier_Ryza">
+            <summary>
+            ライザのアトリエ　常闇の女王と秘密の隠れ家
+            </summary>
+        </member>
+        <member name="T:AtelierLaDiDa.FrmBase">
+            <summary>
+            基底表單
+            </summary>
+        </member>
+        <member name="M:AtelierLaDiDa.FrmBase.#ctor">
+            <summary>
+            建構式
+            </summary>
+        </member>
+        <member name="M:AtelierLaDiDa.FrmBase.indexUpdate">
+            <summary>
+            更新物品目錄
+            </summary>
+        </member>
+        <member name="F:AtelierLaDiDa.FrmBase.components">
+            <summary>
+            設計工具所需的變數。
+            </summary>
+        </member>
+        <member name="M:AtelierLaDiDa.FrmBase.Dispose(System.Boolean)">
+            <summary>
+            清除任何使用中的資源。
+            </summary>
+            <param name="disposing">如果應該處置受控資源則為 true，否則為 false。</param>
+        </member>
+        <member name="M:AtelierLaDiDa.FrmBase.InitializeComponent">
+            <summary>
+            此為設計工具支援所需的方法 - 請勿使用程式碼編輯器修改
+            這個方法的內容。
+            </summary>
+        </member>
+        <member name="T:AtelierLaDiDa.Initialize">
+            <summary>
+            初始化類別
+            </summary>
+        </member>
+        <member name="M:AtelierLaDiDa.Initialize.#ctor(AtelierLaDiDa.EnumSeriesName)">
+            <summary>
+            建構式
+            </summary>
+            <param name="seriesName"></param>
+        </member>
+        <member name="T:AtelierLaDiDa.Log">
+            <summary>
+            紀錄類別
+            </summary>
+        </member>
+        <member name="M:AtelierLaDiDa.Log.writeLog(System.String)">
+            <summary>
+            紀錄撰寫
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:AtelierLaDiDa.Program.Main">
+            <summary>
+            應用程式的主要進入點。
+            </summary>
+        </member>
+        <member name="T:AtelierLaDiDa.Properties.Resources">
+            <summary>
+              用於查詢當地語系化字串等的強類型資源類別
+            </summary>
+        </member>
+        <member name="P:AtelierLaDiDa.Properties.Resources.ResourceManager">
+            <summary>
+              傳回這個類別使用的快取的 ResourceManager 執行個體。
+            </summary>
+        </member>
+        <member name="P:AtelierLaDiDa.Properties.Resources.Culture">
+            <summary>
+              覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+              使用這個強類型資源類別的資源查閱。
+            </summary>
+        </member>
+    </members>
+</doc>
