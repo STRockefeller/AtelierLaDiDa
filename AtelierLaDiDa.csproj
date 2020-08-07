@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataBases\A17DB.cs" />
+    <Compile Include="DataBases\A20DB.cs" />
     <Compile Include="DataBases\A21DB.cs" />
     <Compile Include="EnumSeriesName.cs" />
     <Compile Include="FrmBase.cs">
@@ -93,6 +94,9 @@
     </Compile>
     <None Include="AtelierLaDiDaClassDiagram.cd" />
     <None Include="DataBases\atelierLaDiDaA17Sqlite.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataBases\atelierLaDiDaA20Sqlite.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="DataBases\atelierLaDiDaA21Sqlite.db">
