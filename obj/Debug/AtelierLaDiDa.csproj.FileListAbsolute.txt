@@ -21,4 +21,4 @@ D:\Projects\AtelierLaDiDa\AtelierLaDiDa\obj\Debug\AtelierLaDiDa.csproj.CopyCompl
 D:\Projects\AtelierLaDiDa\AtelierLaDiDa\bin\Debug\DataBases\atelierLaDiDaA21Sqlite.db
 D:\Projects\AtelierLaDiDa\AtelierLaDiDa\bin\Debug\DataBases\atelierLaDiDaA17Sqlite.db
 D:\Projects\AtelierLaDiDa\AtelierLaDiDa\bin\Debug\DataBases\atelierLaDiDaA20Sqlite.db
-D:\Projects\AtelierLaDiDa\AtelierLaDiDa\obj\Debug\AtelierLaDiDa.csprojAssemblyReference.cache
+D:\Projects\AtelierLaDiDa\AtelierLaDiDa\bin\Debug\DataBases\atelierLaDiDaA17JPSqlite.db

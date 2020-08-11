@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataBases\A17DB.cs" />
+    <Compile Include="DataBases\A17JPDB.cs" />
     <Compile Include="DataBases\A20DB.cs" />
     <Compile Include="DataBases\A21DB.cs" />
     <Compile Include="EnumSeriesName.cs" />
@@ -93,6 +94,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="AtelierLaDiDaClassDiagram.cd" />
+    <None Include="DataBases\atelierLaDiDaA17JPSqlite.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="DataBases\atelierLaDiDaA17Sqlite.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

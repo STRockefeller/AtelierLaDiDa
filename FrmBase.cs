@@ -65,11 +65,22 @@ namespace AtelierLaDiDa
             switch (seriesName)
             {
                 case EnumSeriesName.A17_Atelier_Sophie:
-                    DataBases.A17DB a17 = new DataBases.A17DB();
-                    returnValue = a17.generateObjectList();
-                    objectList = returnValue.ToArray();
-                    cbxSource.Items.AddRange(objectList);
-                    cbxDestination.Items.AddRange(objectList);
+                    if(chbxJapanese.Checked)
+                    {
+                        DataBases.A17JPDB a17jp = new DataBases.A17JPDB();
+                        returnValue = a17jp.generateObjectList();
+                        objectList = returnValue.ToArray();
+                        cbxSource.Items.AddRange(objectList);
+                        cbxDestination.Items.AddRange(objectList);
+                    }
+                    else
+                    {
+                        DataBases.A17DB a17 = new DataBases.A17DB();
+                        returnValue = a17.generateObjectList();
+                        objectList = returnValue.ToArray();
+                        cbxSource.Items.AddRange(objectList);
+                        cbxDestination.Items.AddRange(objectList);
+                    }
                     break;
                 case EnumSeriesName.A20_Atelier_Lulua:
                     A20DB a20 = new A20DB();
@@ -108,8 +119,16 @@ namespace AtelierLaDiDa
             switch(seriesName)
             {
                 case EnumSeriesName.A17_Atelier_Sophie:
-                    A17DB a17 = new A17DB();
-                    tbxResult.Text = a17.search(cbxSource.Text,cbxDestination.Text);
+                    if(chbxJapanese.Checked)
+                    {
+                        A17JPDB a17jp = new A17JPDB();
+                        tbxResult.Text = a17jp.search(cbxSource.Text, cbxDestination.Text);
+                    }
+                    else
+                    {
+                        A17DB a17 = new A17DB();
+                        tbxResult.Text = a17.search(cbxSource.Text, cbxDestination.Text);
+                    }
                     break;
                 case EnumSeriesName.A20_Atelier_Lulua:
                     A20DB a20 = new A20DB();

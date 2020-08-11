@@ -40,6 +40,7 @@
             this.btnCalculate = new System.Windows.Forms.Button();
             this.tbxResult = new System.Windows.Forms.TextBox();
             this.btnReadMe = new System.Windows.Forms.Button();
+            this.chbxJapanese = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // cbxSeriesName
@@ -105,7 +106,7 @@
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(8, 53);
+            this.btnConfirm.Location = new System.Drawing.Point(112, 54);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(75, 23);
             this.btnConfirm.TabIndex = 7;
@@ -155,11 +156,22 @@
             this.btnReadMe.Visible = false;
             this.btnReadMe.Click += new System.EventHandler(this.btnReadMe_Click);
             // 
+            // chbxJapanese
+            // 
+            this.chbxJapanese.AutoSize = true;
+            this.chbxJapanese.Location = new System.Drawing.Point(15, 57);
+            this.chbxJapanese.Name = "chbxJapanese";
+            this.chbxJapanese.Size = new System.Drawing.Size(77, 19);
+            this.chbxJapanese.TabIndex = 12;
+            this.chbxJapanese.Text = "Japanese";
+            this.chbxJapanese.UseVisualStyleBackColor = true;
+            // 
             // FrmBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1068, 537);
+            this.Controls.Add(this.chbxJapanese);
             this.Controls.Add(this.btnReadMe);
             this.Controls.Add(this.tbxResult);
             this.Controls.Add(this.btnCalculate);
@@ -194,6 +206,7 @@
         private System.Windows.Forms.Button btnCalculate;
         private System.Windows.Forms.TextBox tbxResult;
         private System.Windows.Forms.Button btnReadMe;
+        private System.Windows.Forms.CheckBox chbxJapanese;
     }
 }
 

@@ -80,6 +80,82 @@
             測試用
             </summary>
         </member>
+        <member name="T:AtelierLaDiDa.DataBases.A17JPDB">
+            <summary>
+            A17資料庫類別
+            </summary>
+        </member>
+        <member name="F:AtelierLaDiDa.DataBases.A17JPDB.dBPath">
+            <summary>
+            資料庫路徑
+            </summary>
+        </member>
+        <member name="F:AtelierLaDiDa.DataBases.A17JPDB.connectionString">
+            <summary>
+            連線路徑
+            </summary>
+        </member>
+        <member name="F:AtelierLaDiDa.DataBases.A17JPDB.connection">
+            <summary>
+            連線物件
+            </summary>
+        </member>
+        <member name="F:AtelierLaDiDa.DataBases.A17JPDB.objectList">
+            <summary>
+            物品清單
+            </summary>
+        </member>
+        <member name="M:AtelierLaDiDa.DataBases.A17JPDB.#ctor">
+            <summary>
+            建構式，連線建立
+            </summary>
+        </member>
+        <member name="M:AtelierLaDiDa.DataBases.A17JPDB.generateObjectList">
+            <summary>
+            生成物品清單
+            </summary>
+            <returns>物品清單</returns>
+        </member>
+        <member name="M:AtelierLaDiDa.DataBases.A17JPDB.search(System.String,System.String)">
+            <summary>
+            特性轉移路徑查詢
+            </summary>
+            <param name="sourceItem"></param>
+            <param name="destinationItem"></param>
+        </member>
+        <member name="M:AtelierLaDiDa.DataBases.A17JPDB.seperateSource(System.String)">
+            <summary>
+            原料類別拆解
+            </summary>
+            <param name="itemName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtelierLaDiDa.DataBases.A17JPDB.seperateDestination(System.String)">
+            <summary>
+            目標物原料拆解
+            </summary>
+            <param name="itemName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtelierLaDiDa.DataBases.A17JPDB.searchIngredient(System.String)">
+            <summary>
+            查詢原料的原料名稱
+            </summary>
+            <param name="itemNameOrType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtelierLaDiDa.DataBases.A17JPDB.clearItemName(System.Collections.Generic.List{System.String})">
+            <summary>
+            將List中無法製作的物品排除
+            </summary>
+            <param name="ItemName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtelierLaDiDa.DataBases.A17JPDB.testDB">
+            <summary>
+            測試用
+            </summary>
+        </member>
         <member name="F:AtelierLaDiDa.DataBases.A20DB.dBPath">
             <summary>
             資料庫路徑
