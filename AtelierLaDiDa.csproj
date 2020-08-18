@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataBases\A17DB.cs" />
+    <Compile Include="DataBases\A17DBLinQ.cs" />
     <Compile Include="DataBases\A17JPDB.cs" />
     <Compile Include="DataBases\A20DB.cs" />
     <Compile Include="DataBases\A21DB.cs" />

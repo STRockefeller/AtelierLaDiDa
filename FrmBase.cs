@@ -75,11 +75,16 @@ namespace AtelierLaDiDa
                     }
                     else
                     {
-                        DataBases.A17DB a17 = new DataBases.A17DB();
-                        returnValue = a17.generateObjectList();
+                        A17DBLinQ a17DBLinQ = new A17DBLinQ();
+                        returnValue = a17DBLinQ.generateObjectList();
                         objectList = returnValue.ToArray();
                         cbxSource.Items.AddRange(objectList);
                         cbxDestination.Items.AddRange(objectList);
+                        //DataBases.A17DB a17 = new DataBases.A17DB();
+                        //returnValue = a17.generateObjectList();
+                        //objectList = returnValue.ToArray();
+                        //cbxSource.Items.AddRange(objectList);
+                        //cbxDestination.Items.AddRange(objectList);
                     }
                     break;
                 case EnumSeriesName.A20_Atelier_Lulua:
@@ -126,8 +131,10 @@ namespace AtelierLaDiDa
                     }
                     else
                     {
-                        A17DB a17 = new A17DB();
-                        tbxResult.Text = a17.search(cbxSource.Text, cbxDestination.Text);
+                        A17DBLinQ a17DBLinQ = new A17DBLinQ();
+                        tbxResult.Text = a17DBLinQ.search(cbxSource.Text, cbxDestination.Text);
+                        //A17DB a17 = new A17DB();
+                        //tbxResult.Text = a17.search(cbxSource.Text, cbxDestination.Text);
                     }
                     break;
                 case EnumSeriesName.A20_Atelier_Lulua:

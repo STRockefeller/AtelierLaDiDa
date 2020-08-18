@@ -20,4 +20,4 @@ D:\Projects\AtelierLaDiDa\AtelierLaDiDa\obj\Release\AtelierLaDiDa.exe
 D:\Projects\AtelierLaDiDa\AtelierLaDiDa\obj\Release\AtelierLaDiDa.pdb
 D:\Projects\AtelierLaDiDa\AtelierLaDiDa\bin\Release\DataBases\atelierLaDiDaA17Sqlite.db
 D:\Projects\AtelierLaDiDa\AtelierLaDiDa\bin\Release\DataBases\atelierLaDiDaA20Sqlite.db
-D:\Projects\AtelierLaDiDa\AtelierLaDiDa\obj\Release\AtelierLaDiDa.csprojAssemblyReference.cache
+D:\Projects\AtelierLaDiDa\AtelierLaDiDa\bin\Release\DataBases\atelierLaDiDaA17JPSqlite.db

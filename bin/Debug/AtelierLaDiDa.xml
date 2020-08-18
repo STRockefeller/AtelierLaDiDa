@@ -80,6 +80,79 @@
             測試用
             </summary>
         </member>
+        <member name="T:AtelierLaDiDa.DataBases.A17DBLinQ">
+            <summary>
+            A17資料處理類別，LinQ練習
+            </summary>
+        </member>
+        <member name="F:AtelierLaDiDa.DataBases.A17DBLinQ.dBPath">
+            <summary>
+            資料庫路徑
+            </summary>
+        </member>
+        <member name="F:AtelierLaDiDa.DataBases.A17DBLinQ.connectionString">
+            <summary>
+            連線路徑
+            </summary>
+        </member>
+        <member name="F:AtelierLaDiDa.DataBases.A17DBLinQ.connection">
+            <summary>
+            連線物件
+            </summary>
+        </member>
+        <member name="M:AtelierLaDiDa.DataBases.A17DBLinQ.#ctor">
+            <summary>
+            建構式
+            </summary>
+        </member>
+        <member name="M:AtelierLaDiDa.DataBases.A17DBLinQ.saveData">
+            <summary>
+            將資料庫內容塞入A17Data類別中
+            </summary>
+        </member>
+        <member name="M:AtelierLaDiDa.DataBases.A17DBLinQ.generateObjectList">
+            <summary>
+            生成物品清單
+            </summary>
+            <returns>物品清單</returns>
+        </member>
+        <member name="M:AtelierLaDiDa.DataBases.A17DBLinQ.search(System.String,System.String)">
+            <summary>
+            特性轉移路徑查詢
+            </summary>
+            <param name="sourceItem"></param>
+            <param name="destinationItem"></param>
+        </member>
+        <member name="T:AtelierLaDiDa.DataBases.A17Data">
+            <summary>
+            物品類別
+            </summary>
+        </member>
+        <member name="P:AtelierLaDiDa.DataBases.A17Data.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:AtelierLaDiDa.DataBases.A17Data.Name">
+            <summary>
+            名稱
+            </summary>
+        </member>
+        <member name="P:AtelierLaDiDa.DataBases.A17Data.Attribute">
+            <summary>
+            屬性
+            </summary>
+        </member>
+        <member name="P:AtelierLaDiDa.DataBases.A17Data.Type">
+            <summary>
+            類型
+            </summary>
+        </member>
+        <member name="P:AtelierLaDiDa.DataBases.A17Data.Source">
+            <summary>
+            原料
+            </summary>
+        </member>
         <member name="T:AtelierLaDiDa.DataBases.A17JPDB">
             <summary>
             A17資料庫類別
