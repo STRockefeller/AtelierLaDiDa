@@ -41,6 +41,12 @@
             this.tbxResult = new System.Windows.Forms.TextBox();
             this.btnReadMe = new System.Windows.Forms.Button();
             this.chbxJapanese = new System.Windows.Forms.CheckBox();
+            this.cbxItemType = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnDetailSource = new System.Windows.Forms.Button();
+            this.btnDetailDestination = new System.Windows.Forms.Button();
+            this.btnSearchSource = new System.Windows.Forms.Button();
+            this.btnSearchType = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cbxSeriesName
@@ -64,7 +70,7 @@
             // lblSeriesName
             // 
             this.lblSeriesName.AutoSize = true;
-            this.lblSeriesName.Location = new System.Drawing.Point(165, 23);
+            this.lblSeriesName.Location = new System.Drawing.Point(12, 57);
             this.lblSeriesName.Name = "lblSeriesName";
             this.lblSeriesName.Size = new System.Drawing.Size(89, 15);
             this.lblSeriesName.TabIndex = 2;
@@ -106,7 +112,7 @@
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(112, 54);
+            this.btnConfirm.Location = new System.Drawing.Point(258, 21);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(75, 23);
             this.btnConfirm.TabIndex = 7;
@@ -159,18 +165,81 @@
             // chbxJapanese
             // 
             this.chbxJapanese.AutoSize = true;
-            this.chbxJapanese.Location = new System.Drawing.Point(15, 57);
+            this.chbxJapanese.Location = new System.Drawing.Point(175, 24);
             this.chbxJapanese.Name = "chbxJapanese";
             this.chbxJapanese.Size = new System.Drawing.Size(77, 19);
             this.chbxJapanese.TabIndex = 12;
             this.chbxJapanese.Text = "Japanese";
             this.chbxJapanese.UseVisualStyleBackColor = true;
             // 
+            // cbxItemType
+            // 
+            this.cbxItemType.FormattingEnabled = true;
+            this.cbxItemType.Location = new System.Drawing.Point(96, 275);
+            this.cbxItemType.Name = "cbxItemType";
+            this.cbxItemType.Size = new System.Drawing.Size(121, 23);
+            this.cbxItemType.TabIndex = 13;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 278);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(36, 15);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Type";
+            // 
+            // btnDetailSource
+            // 
+            this.btnDetailSource.Location = new System.Drawing.Point(258, 92);
+            this.btnDetailSource.Name = "btnDetailSource";
+            this.btnDetailSource.Size = new System.Drawing.Size(75, 23);
+            this.btnDetailSource.TabIndex = 15;
+            this.btnDetailSource.Text = "Detail";
+            this.btnDetailSource.UseVisualStyleBackColor = true;
+            this.btnDetailSource.Click += new System.EventHandler(this.btnDetailSource_Click);
+            // 
+            // btnDetailDestination
+            // 
+            this.btnDetailDestination.Location = new System.Drawing.Point(258, 127);
+            this.btnDetailDestination.Name = "btnDetailDestination";
+            this.btnDetailDestination.Size = new System.Drawing.Size(75, 23);
+            this.btnDetailDestination.TabIndex = 16;
+            this.btnDetailDestination.Text = "Detail";
+            this.btnDetailDestination.UseVisualStyleBackColor = true;
+            this.btnDetailDestination.Click += new System.EventHandler(this.btnDetailDestination_Click);
+            // 
+            // btnSearchSource
+            // 
+            this.btnSearchSource.Location = new System.Drawing.Point(258, 274);
+            this.btnSearchSource.Name = "btnSearchSource";
+            this.btnSearchSource.Size = new System.Drawing.Size(121, 23);
+            this.btnSearchSource.TabIndex = 17;
+            this.btnSearchSource.Text = "Search Source";
+            this.btnSearchSource.UseVisualStyleBackColor = true;
+            this.btnSearchSource.Click += new System.EventHandler(this.btnSearchSource_Click);
+            // 
+            // btnSearchType
+            // 
+            this.btnSearchType.Location = new System.Drawing.Point(258, 303);
+            this.btnSearchType.Name = "btnSearchType";
+            this.btnSearchType.Size = new System.Drawing.Size(121, 23);
+            this.btnSearchType.TabIndex = 18;
+            this.btnSearchType.Text = "Search Type";
+            this.btnSearchType.UseVisualStyleBackColor = true;
+            this.btnSearchType.Click += new System.EventHandler(this.btnSearchType_Click);
+            // 
             // FrmBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1068, 537);
+            this.Controls.Add(this.btnSearchType);
+            this.Controls.Add(this.btnSearchSource);
+            this.Controls.Add(this.btnDetailDestination);
+            this.Controls.Add(this.btnDetailSource);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.cbxItemType);
             this.Controls.Add(this.chbxJapanese);
             this.Controls.Add(this.btnReadMe);
             this.Controls.Add(this.tbxResult);
@@ -207,6 +276,12 @@
         private System.Windows.Forms.TextBox tbxResult;
         private System.Windows.Forms.Button btnReadMe;
         private System.Windows.Forms.CheckBox chbxJapanese;
+        private System.Windows.Forms.ComboBox cbxItemType;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnDetailSource;
+        private System.Windows.Forms.Button btnDetailDestination;
+        private System.Windows.Forms.Button btnSearchSource;
+        private System.Windows.Forms.Button btnSearchType;
     }
 }
 

@@ -22,4 +22,6 @@ D:\Projects\AtelierLaDiDa\AtelierLaDiDa\bin\Debug\DataBases\atelierLaDiDaA21Sqli
 D:\Projects\AtelierLaDiDa\AtelierLaDiDa\bin\Debug\DataBases\atelierLaDiDaA17Sqlite.db
 D:\Projects\AtelierLaDiDa\AtelierLaDiDa\bin\Debug\DataBases\atelierLaDiDaA20Sqlite.db
 D:\Projects\AtelierLaDiDa\AtelierLaDiDa\bin\Debug\DataBases\atelierLaDiDaA17JPSqlite.db
-D:\Projects\AtelierLaDiDa\AtelierLaDiDa\obj\Debug\AtelierLaDiDa.csprojAssemblyReference.cache
+D:\Projects\AtelierLaDiDa\AtelierLaDiDa\bin\Debug\linq2db.dll
+D:\Projects\AtelierLaDiDa\AtelierLaDiDa\bin\Debug\linq2db.pdb
+D:\Projects\AtelierLaDiDa\AtelierLaDiDa\bin\Debug\linq2db.xml

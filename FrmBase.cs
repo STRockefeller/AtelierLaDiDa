@@ -17,6 +17,10 @@ namespace AtelierLaDiDa
     public partial class FrmBase : Form
     {
         /// <summary>
+        /// 資料庫物件
+        /// </summary>
+        public CommonDataBase dataBase;
+        /// <summary>
         /// 建構式
         /// </summary>
         public FrmBase()
@@ -34,7 +38,7 @@ namespace AtelierLaDiDa
         private EnumSeriesName seriesName;
         private void cbxSeriesName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch(cbxSeriesName.Text)
+            switch (cbxSeriesName.Text)
             {
                 case "A17":
                     lblSeriesName.Text = "ソフィーのアトリエ ～不思議な本の錬金術士～";
@@ -50,7 +54,7 @@ namespace AtelierLaDiDa
                     break;
                 default:
                     break;
-                //to update
+                    //to update
             }
         }
         /// <summary>
@@ -58,52 +62,16 @@ namespace AtelierLaDiDa
         /// </summary>
         private void indexUpdate()
         {
-            List<string> returnValue;
-            string[] objectList;
             cbxDestination.Items.Clear();
             cbxSource.Items.Clear();
-            switch (seriesName)
-            {
-                case EnumSeriesName.A17_Atelier_Sophie:
-                    if(chbxJapanese.Checked)
-                    {
-                        DataBases.A17JPDB a17jp = new DataBases.A17JPDB();
-                        returnValue = a17jp.generateObjectList();
-                        objectList = returnValue.ToArray();
-                        cbxSource.Items.AddRange(objectList);
-                        cbxDestination.Items.AddRange(objectList);
-                    }
-                    else
-                    {
-                        A17DBLinQ a17DBLinQ = new A17DBLinQ();
-                        returnValue = a17DBLinQ.generateObjectList();
-                        objectList = returnValue.ToArray();
-                        cbxSource.Items.AddRange(objectList);
-                        cbxDestination.Items.AddRange(objectList);
-                        //DataBases.A17DB a17 = new DataBases.A17DB();
-                        //returnValue = a17.generateObjectList();
-                        //objectList = returnValue.ToArray();
-                        //cbxSource.Items.AddRange(objectList);
-                        //cbxDestination.Items.AddRange(objectList);
-                    }
-                    break;
-                case EnumSeriesName.A20_Atelier_Lulua:
-                    A20DB a20 = new A20DB();
-                    returnValue = a20.generateObjectList();
-                    objectList = returnValue.ToArray();
-                    cbxSource.Items.AddRange(objectList);
-                    cbxDestination.Items.AddRange(objectList);
-                    break;
-                case EnumSeriesName.A21_Atelier_Ryza:
-                    A21DB a21 = new A21DB();
-                    returnValue = a21.generateObjectList();
-                    objectList = returnValue.ToArray();
-                    cbxSource.Items.AddRange(objectList);
-                    cbxDestination.Items.AddRange(objectList);
-                    break;
-                default:
-                    break;
-            }
+            cbxItemType.Items.Clear();
+            if (chbxJapanese.Checked)
+                this.dataBase = new CommonDataBase(seriesName, "Japanese");
+            else
+                this.dataBase = new CommonDataBase(seriesName);
+            cbxSource.Items.AddRange(dataBase.generateObjectList().ToArray());
+            cbxDestination.Items.AddRange(dataBase.generateObjectList().ToArray());
+            cbxItemType.Items.AddRange(dataBase.generatrTypeList().ToArray());
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
@@ -114,47 +82,58 @@ namespace AtelierLaDiDa
         #region test
         private void btnTest_Click(object sender, EventArgs e)
         {
-            AtelierLaDiDa.DataBases.A17DB a17 = new DataBases.A17DB();
-            a17.testDB();
-        }
-        #endregion
+            //AtelierLaDiDa.DataBases.A17DB a17 = new DataBases.A17DB();
+            //a17.testDB();
 
-        private void btnCalculate_Click(object sender, EventArgs e)
-        {
-            switch(seriesName)
+            CommonDataBase commonDataBase;
+            switch (seriesName)
             {
                 case EnumSeriesName.A17_Atelier_Sophie:
-                    if(chbxJapanese.Checked)
+                    if (chbxJapanese.Checked)
                     {
-                        A17JPDB a17jp = new A17JPDB();
-                        tbxResult.Text = a17jp.search(cbxSource.Text, cbxDestination.Text);
+                        commonDataBase = new CommonDataBase(seriesName, "Japanese");
                     }
                     else
                     {
-                        A17DBLinQ a17DBLinQ = new A17DBLinQ();
-                        tbxResult.Text = a17DBLinQ.search(cbxSource.Text, cbxDestination.Text);
-                        //A17DB a17 = new A17DB();
-                        //tbxResult.Text = a17.search(cbxSource.Text, cbxDestination.Text);
+                        commonDataBase = new CommonDataBase(seriesName);
                     }
-                    break;
-                case EnumSeriesName.A20_Atelier_Lulua:
-                    A20DB a20 = new A20DB();
-                    tbxResult.Text = a20.search(cbxSource.Text, cbxDestination.Text);
-                    break;
-                case EnumSeriesName.A21_Atelier_Ryza:
-                    A21DB a21 = new A21DB();
-                    tbxResult.Text = a21.search(cbxSource.Text, cbxDestination.Text);
                     break;
                 default:
                     break;
             }
         }
+        #endregion
+
+        private void btnCalculate_Click(object sender, EventArgs e)
+        {
+            tbxResult.Text = dataBase.search(cbxSource.Text, cbxDestination.Text);
+        }
 
         private void btnReadMe_Click(object sender, EventArgs e)
         {
-            string message="";
+            string message = "";
             message += "";
             MessageBox.Show(message, "Read Me");
+        }
+
+        private void btnDetailSource_Click(object sender, EventArgs e)
+        {
+            tbxResult.Text = dataBase.showItemDetail(cbxSource.Text);
+        }
+
+        private void btnDetailDestination_Click(object sender, EventArgs e)
+        {
+            tbxResult.Text = dataBase.showItemDetail(cbxDestination.Text);
+        }
+
+        private void btnSearchSource_Click(object sender, EventArgs e)
+        {
+            tbxResult.Text = dataBase.searchSource(cbxItemType.Text);
+        }
+
+        private void btnSearchType_Click(object sender, EventArgs e)
+        {
+            tbxResult.Text = dataBase.searchType(cbxItemType.Text);
         }
     }
 }

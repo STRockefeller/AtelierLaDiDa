@@ -20,15 +20,35 @@
 A17、A20、A21中文版資料庫內容參考巴哈鍊金版版上的試算表編輯修改而成。
 A17日文版資料庫內容參考來源 https://omoteura.com/atelier_sophie/
 
+## How to Use
+
+![01](https://i.imgur.com/2FVOXrI.png)
+
+![02](https://i.imgur.com/kvtJptU.png)
+
+Selet series and click "Confirm"
+
+
+
+![03](https://i.imgur.com/K719Jrb.png)
+
+Specify the Source and Destination Item Name
+
+Click "Calculate" and you will see the result
+
+![04](https://i.imgur.com/PD6UQtu.png)
+
 ## Images
 
-![image01](https://i.imgur.com/Bi1d2cq.png)
+![05](https://i.imgur.com/wecRX4K.png)
 
-![image02](https://imgur.com/kONeFky.png)
+![06](https://i.imgur.com/K1gqHtX.png)
 
-![image03](https://imgur.com/yUaITrm.png)
+![07](https://i.imgur.com/JgQyBYj.png)
 
-![image04](https://imgur.com/yEqiVOG.png)
+![8](https://i.imgur.com/DX00DYY.png)
+
+![09](https://i.imgur.com/H3T9P0E.png)
 
 ## Notice
 
@@ -40,6 +60,7 @@ A17日文版資料庫內容參考來源 https://omoteura.com/atelier_sophie/
 
 >### A17
 >1.    武器以及防具不在調和品清單內，欲將特性轉移至武器或防具上請將目標物設定為**金屬**或**布料**
+>2.    日文版目前只有物品名稱是日文，其他如物品類別、屬性等資訊仍是中文。
 
 >### A20
 >1.    我還沒玩過，所以不清楚可能發生的狀況
@@ -55,3 +76,4 @@ A17日文版資料庫內容參考來源 https://omoteura.com/atelier_sophie/
 * 2020/8/10 修正A20中文版部分路徑無法被找出的問題。
 * 2020/8/11 新增A17日文版內容
 * 2020/8/18 剛學了點LinQ，試著將A17中文版的部分以LinQ改寫，已完成。功能沒變，但程式碼簡潔許多。
+* 2020/9/2 學了更多LinQ，大規模改寫，將原本每一個資料庫一個Class的模式變更為共用相同的Class，新增查詢物品詳細資料的功能，新增從物品類別查詢物品的功能，新增從物品類別查詢原料中含有該類別物品的功能。
