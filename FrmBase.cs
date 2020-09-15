@@ -31,6 +31,7 @@ namespace AtelierLaDiDa
         private void FrmBase_Load(object sender, EventArgs e)
         {
             cbxSeriesName.Items.Add("A11");
+            cbxSeriesName.Items.Add("A12");
             cbxSeriesName.Items.Add("A17");
             cbxSeriesName.Items.Add("A20");
             cbxSeriesName.Items.Add("A21");
@@ -44,6 +45,10 @@ namespace AtelierLaDiDa
                 case "A11":
                     lblSeriesName.Text = "ロロナのアトリエ～アーランドの錬金術士～";
                     seriesName = EnumSeriesName.A11_Atelier_Rorona;
+                    break;
+                case "A12":
+                    lblSeriesName.Text = "トトリのアトリエ ～アーランドの錬金術士2～";
+                    seriesName = EnumSeriesName.A12_Atelier_Totori;
                     break;
                 case "A17":
                     lblSeriesName.Text = "ソフィーのアトリエ ～不思議な本の錬金術士～";

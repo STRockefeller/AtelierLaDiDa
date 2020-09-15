@@ -76,6 +76,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>A11.SQLite.tt</DependentUpon>
     </Compile>
+    <Compile Include="A12.SQLite1.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>A12.SQLite.tt</DependentUpon>
+    </Compile>
     <Compile Include="A17.SQLite.generated.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -99,6 +104,10 @@
     <Content Include="A11.SQLite.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>A11.SQLite1.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="A12.SQLite.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>A12.SQLite1.generated.cs</LastGenOutput>
     </Content>
     <Compile Include="DataBases\CommonDataBase.cs" />
     <Compile Include="EnumSeriesName.cs" />
@@ -126,6 +135,9 @@
     </Compile>
     <None Include="AtelierLaDiDaClassDiagram.cd" />
     <None Include="DataBases\atelierLaDiDaA11Sqlite.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataBases\atelierLaDiDaA12Sqlite.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="DataBases\atelierLaDiDaA17JPSqlite.db">

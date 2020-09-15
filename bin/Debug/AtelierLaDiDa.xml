@@ -11,6 +11,13 @@
             Server Version : 3.24.0
             </summary>
         </member>
+        <member name="T:AtelierLaDiDa.DataBases.AtelierLaDiDaA12SqliteDB">
+            <summary>
+            Database       : atelierLaDiDaA12Sqlite
+            Data Source    : atelierLaDiDaA12Sqlite
+            Server Version : 3.24.0
+            </summary>
+        </member>
         <member name="T:AtelierLaDiDa.DataBases.AtelierLaDiDaA17SqliteDB">
             <summary>
             Database       : atelierLaDiDaA17Sqlite
@@ -165,6 +172,11 @@
         <member name="F:AtelierLaDiDa.EnumSeriesName.A11_Atelier_Rorona">
             <summary>
             ロロナのアトリエ～アーランドの錬金術士～
+            </summary>
+        </member>
+        <member name="F:AtelierLaDiDa.EnumSeriesName.A12_Atelier_Totori">
+            <summary>
+            トトリのアトリエ ～アーランドの錬金術士2～
             </summary>
         </member>
         <member name="F:AtelierLaDiDa.EnumSeriesName.A17_Atelier_Sophie">

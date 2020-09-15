@@ -86,6 +86,38 @@ namespace AtelierLaDiDa.DataBases
                         }
                     }
                     break;
+                case EnumSeriesName.A12_Atelier_Totori:
+
+                    using (var db = new AtelierLaDiDaA12SqliteDB("A12DB"))
+                    {
+                        var query = db.Totori.Where(item => item.Name.Length >= 1).Select(item => item);
+                        foreach (Totori totoriItem in query)
+                        {
+                            CommonItemData itemData = new CommonItemData();
+                            itemData.Name = totoriItem.Name;
+                            itemData.ID = Convert.ToInt32(totoriItem.No.TrimStart('0'));
+                            itemData.Attribute.Add(totoriItem.Attribute1);
+                            itemData.Attribute.Add(totoriItem.Attribute2);
+                            itemData.Attribute.Add(totoriItem.Attribute3);
+                            itemData.Attribute.Add(totoriItem.Attribute4);
+                            itemData.Type.Add(totoriItem.Type1);
+                            itemData.Type.Add(totoriItem.Type2);
+                            itemData.Type.Add(totoriItem.Type3);
+                            itemData.Type.Add(totoriItem.Type4);
+                            itemData.Type.Add(totoriItem.Type5);
+                            itemData.Type.Add(totoriItem.Type6);
+                            itemData.Source.Add(totoriItem.Source1);
+                            itemData.Source.Add(totoriItem.Source2);
+                            itemData.Source.Add(totoriItem.Source3);
+                            itemData.Source.Add(totoriItem.Source4);
+                            itemData.JapaneseName = totoriItem.Japanese;
+                            itemData.Attribute.RemoveAll(str => str == "");
+                            itemData.Type.RemoveAll(str => str == "");
+                            itemData.Source.RemoveAll(str => str == "");
+                            itemDatas.Add(itemData);
+                        }
+                    }
+                    break;
                 case EnumSeriesName.A17_Atelier_Sophie:
                     if (language == "Japanese")
                     {
