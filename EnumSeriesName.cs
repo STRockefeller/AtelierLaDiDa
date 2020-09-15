@@ -11,6 +11,10 @@ namespace AtelierLaDiDa
     public enum EnumSeriesName
     {
         /// <summary>
+        /// ロロナのアトリエ～アーランドの錬金術士～
+        /// </summary>
+        A11_Atelier_Rorona = 11,
+        /// <summary>
         /// ソフィーのアトリエ ～不思議な本の錬金術士～
         /// </summary>
         A17_Atelier_Sophie = 17,

@@ -4,6 +4,13 @@
         <name>AtelierLaDiDa</name>
     </assembly>
     <members>
+        <member name="T:AtelierLaDiDa.DataBases.AtelierLaDiDaA11SqliteDB">
+            <summary>
+            Database       : atelierLaDiDaA11Sqlite
+            Data Source    : atelierLaDiDaA11Sqlite
+            Server Version : 3.24.0
+            </summary>
+        </member>
         <member name="T:AtelierLaDiDa.DataBases.AtelierLaDiDaA17SqliteDB">
             <summary>
             Database       : atelierLaDiDaA17Sqlite
@@ -125,6 +132,16 @@
             名稱
             </summary>
         </member>
+        <member name="P:AtelierLaDiDa.DataBases.CommonItemData.JapaneseName">
+            <summary>
+            日文名稱
+            </summary>
+        </member>
+        <member name="P:AtelierLaDiDa.DataBases.CommonItemData.EnglishName">
+            <summary>
+            英文名稱
+            </summary>
+        </member>
         <member name="P:AtelierLaDiDa.DataBases.CommonItemData.Attribute">
             <summary>
             屬性
@@ -143,6 +160,11 @@
         <member name="T:AtelierLaDiDa.EnumSeriesName">
             <summary>
             系列名列舉
+            </summary>
+        </member>
+        <member name="F:AtelierLaDiDa.EnumSeriesName.A11_Atelier_Rorona">
+            <summary>
+            ロロナのアトリエ～アーランドの錬金術士～
             </summary>
         </member>
         <member name="F:AtelierLaDiDa.EnumSeriesName.A17_Atelier_Sophie">

@@ -54,6 +54,38 @@ namespace AtelierLaDiDa.DataBases
             itemDatas.Clear();
             switch (seriesName)
             {
+                case EnumSeriesName.A11_Atelier_Rorona:
+
+                    using (var db = new AtelierLaDiDaA11SqliteDB("A11DB"))
+                    {
+                        var query = db.Rorona.Where(item=>item.Name.Length>=1).Select(item => item);
+                        foreach (Rorona roronaItem in query)
+                        {
+                            CommonItemData itemData = new CommonItemData();
+                            itemData.Name = roronaItem.Name;
+                            itemData.ID = Convert.ToInt32(roronaItem.No.TrimStart('0')) ;
+                            itemData.Attribute.Add(roronaItem.Attribute1);
+                            itemData.Attribute.Add(roronaItem.Attribute2);
+                            itemData.Attribute.Add(roronaItem.Attribute3);
+                            itemData.Attribute.Add(roronaItem.Attribute4);
+                            itemData.Type.Add(roronaItem.Type1);
+                            itemData.Type.Add(roronaItem.Type2);
+                            itemData.Type.Add(roronaItem.Type3);
+                            itemData.Type.Add(roronaItem.Type4);
+                            itemData.Type.Add(roronaItem.Type5);
+                            itemData.Type.Add(roronaItem.Type6);
+                            itemData.Source.Add(roronaItem.Source1);
+                            itemData.Source.Add(roronaItem.Source2);
+                            itemData.Source.Add(roronaItem.Source3);
+                            itemData.Source.Add(roronaItem.Source4);
+                            itemData.JapaneseName = roronaItem.Japanese;
+                            itemData.Attribute.RemoveAll(str => str == "");
+                            itemData.Type.RemoveAll(str => str == "");
+                            itemData.Source.RemoveAll(str => str == "");
+                            itemDatas.Add(itemData);
+                        }
+                    }
+                    break;
                 case EnumSeriesName.A17_Atelier_Sophie:
                     if (language == "Japanese")
                     {
@@ -184,7 +216,7 @@ namespace AtelierLaDiDa.DataBases
         /// 生成物品清單
         /// </summary>
         /// <returns>物品清單</returns>
-        public List<string> generateObjectList()=>itemDatas.Select(item => item.Name).ToList();
+        public List<string> generateObjectList() => itemDatas.Select(item => item.Name).ToList();
         /// <summary>
         /// 生成物品類型清單
         /// </summary>
@@ -208,8 +240,8 @@ namespace AtelierLaDiDa.DataBases
             returnValue += $"Item Detail\r\n";
             returnValue += $"ID:{target.ID}\r\n";
             returnValue += $"Name:{target.Name}\r\n";
-            foreach(string a in target.Attribute)
-                if(a!=null)
+            foreach (string a in target.Attribute)
+                if (a != null)
                     returnValue += $"Attribute:{a}\r\n";
             foreach (string a in target.Type)
                 if (a != null)
@@ -321,6 +353,14 @@ namespace AtelierLaDiDa.DataBases
         /// 名稱
         /// </summary>
         public string Name { get; set; }
+        /// <summary>
+        /// 日文名稱
+        /// </summary>
+        public string JapaneseName { get; set; }
+        /// <summary>
+        /// 英文名稱
+        /// </summary>
+        public string EnglishName { get; set; }
         /// <summary>
         /// 屬性
         /// </summary>
