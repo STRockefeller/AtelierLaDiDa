@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtelierLaDiDa", "AtelierLaDiDa\AtelierLaDiDa.csproj", "{644B19E9-0C23-4425-B937-A0BD48E68606}"
+EndProject
+Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "SHFB", "SHFB\SHFB.shfbproj", "{54C6DC20-3452-486E-907E-57F4BDD00C9D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{644B19E9-0C23-4425-B937-A0BD48E68606}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{644B19E9-0C23-4425-B937-A0BD48E68606}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{644B19E9-0C23-4425-B937-A0BD48E68606}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{644B19E9-0C23-4425-B937-A0BD48E68606}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54C6DC20-3452-486E-907E-57F4BDD00C9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54C6DC20-3452-486E-907E-57F4BDD00C9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54C6DC20-3452-486E-907E-57F4BDD00C9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54C6DC20-3452-486E-907E-57F4BDD00C9D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44449E26-3AF5-4BBB-AF06-6A866DBE83FE}
+	EndGlobalSection
+EndGlobal
