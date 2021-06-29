@@ -11,8 +11,8 @@
 
 目前支援的作品包含
 
-* A11 蘿樂娜的鍊金工房 ロロナのアトリエ～アーランドの錬金術士～ 中文版
-* A12 托托利的鍊金工房 トトリのアトリエ ～アーランドの錬金術士2～ 中文版
+* A11 蘿樂娜的鍊金工房 ロロナのアトリエ～アーランドの錬金術士～ 中文版 日文版
+* A12 托托利的鍊金工房 トトリのアトリエ ～アーランドの錬金術士2～ 中文版 日文版
  * A17 蘇菲的鍊金工房 ソフィーのアトリエ ～不思議な本の錬金術士～ 中文版 日文版
  * A20 露露亞的鍊金工房 ルルアのアトリエ ～アーランドの錬金術士 4～ 中文版
  * A21 萊莎的鍊金工房 ライザのアトリエ　常闇の女王と秘密の隠れ家 中文版
@@ -25,9 +25,9 @@ A17日文版資料庫內容[參考來源](https://omoteura.com/atelier_sophie/)
 
 ![01](https://i.imgur.com/2FVOXrI.png)
 
-![02](https://i.imgur.com/kvtJptU.png)
 
-Selet series and click "Confirm"
+
+Select series and Language (Default: Traditional Chinese)
 
 
 
@@ -35,21 +35,19 @@ Selet series and click "Confirm"
 
 Specify the Source and Destination Item Name
 
-Click "Calculate" and you will see the result
+Click "Get Route" and you will see the result
 
 ![04](https://i.imgur.com/PD6UQtu.png)
 
 ## Images
 
-![05](https://i.imgur.com/wecRX4K.png)
+![05](https://i.imgur.com/3T9Fp4y.png)
 
-![06](https://i.imgur.com/K1gqHtX.png)
+![06](https://i.imgur.com/galsK6V.png)
 
-![07](https://i.imgur.com/JgQyBYj.png)
+![07](https://i.imgur.com/c6EHU9G.png)
 
-![8](https://i.imgur.com/DX00DYY.png)
 
-![09](https://i.imgur.com/H3T9P0E.png)
 
 ## Notice
 
@@ -82,4 +80,13 @@ Click "Calculate" and you will see the result
 * 2020/8/11 新增A17日文版內容
 * 2020/8/18 剛學了點LinQ，試著將A17中文版的部分以LinQ改寫，已完成。功能沒變，但程式碼簡潔許多。
 * 2020/9/2 學了更多LinQ，大規模改寫，將原本每一個資料庫一個Class的模式變更為共用相同的Class，新增查詢物品詳細資料的功能，新增從物品類別查詢物品的功能，新增從物品類別查詢原料中含有該類別物品的功能。
-* 2020/9/15 新增A11、A12中文版內容
+* 2020/9/15 (v1.0.0)新增A11、A12中文版內容
+* 2021/6/29 (v1.1.0)
+  * 修改資料庫格式，完成資料格式統一
+  * 專案由.net framework 4.7.2升級至.net core 3.1
+  * 程式重構，捨棄LinqToDB改用EntityFramework
+  * 新增A11、A12日文內容
+  * 新增下拉式選單自動填入功能
+  * 現在更變遊戲版本和中日文模式無須點擊`Confirm`按鈕，會立即完成切換。
+  * 現在於尚未支援日文模式的遊戲版本中，無法勾選日文模式
+  * 修正日文模式下無法查詢物品詳細資料的錯誤

@@ -8,7 +8,7 @@ namespace AtelierLaDiDaDatabase
     public class Parameters
     {
         internal static string DBPath = "";
-        public static void SetDBPath(string path) => DBPath = path;
+        public static void SetDBPath(string path) => DBPath = "Data Source="+path;
     }
     /// <summary>
     /// 對外提供資料庫資訊的類別

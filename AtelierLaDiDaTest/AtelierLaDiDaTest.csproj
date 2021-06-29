@@ -13,7 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AtelierLaDiDaDataAdapter\AtelierLaDiDaDataAdapter.csproj" />
     <ProjectReference Include="..\AtelierLaDiDaDatabase\AtelierLaDiDaDatabase.csproj" />
   </ItemGroup>
 
