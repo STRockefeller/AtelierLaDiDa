@@ -36,7 +36,6 @@
             this.cbxSource = new System.Windows.Forms.ComboBox();
             this.cbxDestination = new System.Windows.Forms.ComboBox();
             this.btnConfirm = new System.Windows.Forms.Button();
-            this.btnTest = new System.Windows.Forms.Button();
             this.btnCalculate = new System.Windows.Forms.Button();
             this.tbxResult = new System.Windows.Forms.TextBox();
             this.btnReadMe = new System.Windows.Forms.Button();
@@ -56,7 +55,7 @@
             this.cbxSeriesName.Name = "cbxSeriesName";
             this.cbxSeriesName.Size = new System.Drawing.Size(62, 23);
             this.cbxSeriesName.TabIndex = 0;
-            this.cbxSeriesName.SelectedIndexChanged += new System.EventHandler(this.cbxSeriesName_SelectedIndexChanged);
+            this.cbxSeriesName.SelectedIndexChanged += new System.EventHandler(this.CbxSeriesName_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -118,18 +117,7 @@
             this.btnConfirm.TabIndex = 7;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseVisualStyleBackColor = true;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
-            // 
-            // btnTest
-            // 
-            this.btnTest.Location = new System.Drawing.Point(464, 488);
-            this.btnTest.Name = "btnTest";
-            this.btnTest.Size = new System.Drawing.Size(75, 23);
-            this.btnTest.TabIndex = 8;
-            this.btnTest.Text = "test";
-            this.btnTest.UseVisualStyleBackColor = true;
-            this.btnTest.Visible = false;
-            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
+            this.btnConfirm.Click += new System.EventHandler(this.BtnConfirm_Click);
             // 
             // btnCalculate
             // 
@@ -139,7 +127,7 @@
             this.btnCalculate.TabIndex = 9;
             this.btnCalculate.Text = "Calculate";
             this.btnCalculate.UseVisualStyleBackColor = true;
-            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
+            this.btnCalculate.Click += new System.EventHandler(this.BtnCalculate_Click);
             // 
             // tbxResult
             // 
@@ -160,7 +148,7 @@
             this.btnReadMe.Text = "Read Me";
             this.btnReadMe.UseVisualStyleBackColor = true;
             this.btnReadMe.Visible = false;
-            this.btnReadMe.Click += new System.EventHandler(this.btnReadMe_Click);
+            this.btnReadMe.Click += new System.EventHandler(this.BtnReadMe_Click);
             // 
             // chbxJapanese
             // 
@@ -197,7 +185,7 @@
             this.btnDetailSource.TabIndex = 15;
             this.btnDetailSource.Text = "Detail";
             this.btnDetailSource.UseVisualStyleBackColor = true;
-            this.btnDetailSource.Click += new System.EventHandler(this.btnDetailSource_Click);
+            this.btnDetailSource.Click += new System.EventHandler(this.BtnDetailSource_Click);
             // 
             // btnDetailDestination
             // 
@@ -207,7 +195,7 @@
             this.btnDetailDestination.TabIndex = 16;
             this.btnDetailDestination.Text = "Detail";
             this.btnDetailDestination.UseVisualStyleBackColor = true;
-            this.btnDetailDestination.Click += new System.EventHandler(this.btnDetailDestination_Click);
+            this.btnDetailDestination.Click += new System.EventHandler(this.BtnDetailDestination_Click);
             // 
             // btnSearchSource
             // 
@@ -217,7 +205,7 @@
             this.btnSearchSource.TabIndex = 17;
             this.btnSearchSource.Text = "Search Source";
             this.btnSearchSource.UseVisualStyleBackColor = true;
-            this.btnSearchSource.Click += new System.EventHandler(this.btnSearchSource_Click);
+            this.btnSearchSource.Click += new System.EventHandler(this.BtnSearchSource_Click);
             // 
             // btnSearchType
             // 
@@ -227,7 +215,7 @@
             this.btnSearchType.TabIndex = 18;
             this.btnSearchType.Text = "Search Type";
             this.btnSearchType.UseVisualStyleBackColor = true;
-            this.btnSearchType.Click += new System.EventHandler(this.btnSearchType_Click);
+            this.btnSearchType.Click += new System.EventHandler(this.BtnSearchType_Click);
             // 
             // FrmBase
             // 
@@ -244,7 +232,6 @@
             this.Controls.Add(this.btnReadMe);
             this.Controls.Add(this.tbxResult);
             this.Controls.Add(this.btnCalculate);
-            this.Controls.Add(this.btnTest);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.cbxDestination);
             this.Controls.Add(this.cbxSource);
@@ -271,7 +258,6 @@
         private System.Windows.Forms.ComboBox cbxSource;
         private System.Windows.Forms.ComboBox cbxDestination;
         private System.Windows.Forms.Button btnConfirm;
-        private System.Windows.Forms.Button btnTest;
         private System.Windows.Forms.Button btnCalculate;
         private System.Windows.Forms.TextBox tbxResult;
         private System.Windows.Forms.Button btnReadMe;

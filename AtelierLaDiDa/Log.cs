@@ -14,7 +14,7 @@ namespace AtelierLaDiDa
         /// 紀錄撰寫
         /// </summary>
         /// <param name="message"></param>
-        public static void writeLog(string message)
+        public static void WriteLog(string message)
         {
             //todo
         }

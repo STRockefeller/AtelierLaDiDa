@@ -18,14 +18,17 @@ namespace AtelierLaDiDa.DataBases
         /// 物品資料
         /// </summary>
         public List<CommonItemData> itemDatas = new List<CommonItemData>();
+
         /// <summary>
         /// 顯示語言
         /// </summary>
-        private string language = "Traditional Chinese";
+        private readonly string language = "Traditional Chinese";
+
         /// <summary>
         /// 取得系列名
         /// </summary>
-        public EnumSeriesName seriesName { get; set; }
+        private readonly EnumSeriesName seriesName;
+
         /// <summary>
         /// 建構式
         /// </summary>
@@ -33,8 +36,9 @@ namespace AtelierLaDiDa.DataBases
         public CommonDataBase(EnumSeriesName seriesName)
         {
             this.seriesName = seriesName;
-            connectToDB();
+            ConnectToDB();
         }
+
         /// <summary>
         /// 建構式，含顯示語言
         /// </summary>
@@ -44,12 +48,13 @@ namespace AtelierLaDiDa.DataBases
         {
             this.seriesName = seriesName;
             this.language = language;
-            connectToDB();
+            ConnectToDB();
         }
+
         /// <summary>
         /// 連線到對應的資料庫
         /// </summary>
-        private void connectToDB()
+        private void ConnectToDB()
         {
             itemDatas.Clear();
             switch (seriesName)
@@ -58,12 +63,14 @@ namespace AtelierLaDiDa.DataBases
 
                     using (var db = new AtelierLaDiDaA11SqliteDB("A11DB"))
                     {
-                        var query = db.Rorona.Where(item=>item.Name.Length>=1).Select(item => item);
+                        var query = db.Rorona.Where(item => item.Name.Length >= 1).Select(item => item);
                         foreach (Rorona roronaItem in query)
                         {
-                            CommonItemData itemData = new CommonItemData();
-                            itemData.Name = roronaItem.Name;
-                            itemData.ID = Convert.ToInt32(roronaItem.No.TrimStart('0')) ;
+                            CommonItemData itemData = new CommonItemData
+                            {
+                                Name = roronaItem.Name,
+                                ID = Convert.ToInt32(roronaItem.No.TrimStart('0'))
+                            };
                             itemData.Attribute.Add(roronaItem.Attribute1);
                             itemData.Attribute.Add(roronaItem.Attribute2);
                             itemData.Attribute.Add(roronaItem.Attribute3);
@@ -86,6 +93,7 @@ namespace AtelierLaDiDa.DataBases
                         }
                     }
                     break;
+
                 case EnumSeriesName.A12_Atelier_Totori:
 
                     using (var db = new AtelierLaDiDaA12SqliteDB("A12DB"))
@@ -93,9 +101,11 @@ namespace AtelierLaDiDa.DataBases
                         var query = db.Totori.Where(item => item.Name.Length >= 1).Select(item => item);
                         foreach (Totori totoriItem in query)
                         {
-                            CommonItemData itemData = new CommonItemData();
-                            itemData.Name = totoriItem.Name;
-                            itemData.ID = Convert.ToInt32(totoriItem.No.TrimStart('0'));
+                            CommonItemData itemData = new CommonItemData
+                            {
+                                Name = totoriItem.Name,
+                                ID = Convert.ToInt32(totoriItem.No.TrimStart('0'))
+                            };
                             itemData.Attribute.Add(totoriItem.Attribute1);
                             itemData.Attribute.Add(totoriItem.Attribute2);
                             itemData.Attribute.Add(totoriItem.Attribute3);
@@ -118,6 +128,7 @@ namespace AtelierLaDiDa.DataBases
                         }
                     }
                     break;
+
                 case EnumSeriesName.A17_Atelier_Sophie:
                     if (language == "Japanese")
                     {
@@ -126,9 +137,11 @@ namespace AtelierLaDiDa.DataBases
                             var query = db.Sophie.Select(item => item);
                             foreach (JP.Sophie sophieItem in query)
                             {
-                                CommonItemData itemData = new CommonItemData();
-                                itemData.Name = sophieItem.Name;
-                                itemData.ID = Convert.ToInt32(sophieItem.No);
+                                CommonItemData itemData = new CommonItemData
+                                {
+                                    Name = sophieItem.Name,
+                                    ID = Convert.ToInt32(sophieItem.No)
+                                };
                                 itemData.Attribute.Add(sophieItem.Attribute1);
                                 itemData.Attribute.Add(sophieItem.Attribute2);
                                 itemData.Attribute.Add(sophieItem.Attribute3);
@@ -156,9 +169,11 @@ namespace AtelierLaDiDa.DataBases
                             var query = db.Sophie.Select(item => item);
                             foreach (Sophie sophieItem in query)
                             {
-                                CommonItemData itemData = new CommonItemData();
-                                itemData.Name = sophieItem.Name;
-                                itemData.ID = Convert.ToInt32(sophieItem.No);
+                                CommonItemData itemData = new CommonItemData
+                                {
+                                    Name = sophieItem.Name,
+                                    ID = Convert.ToInt32(sophieItem.No)
+                                };
                                 itemData.Attribute.Add(sophieItem.Attribute1);
                                 itemData.Attribute.Add(sophieItem.Attribute2);
                                 itemData.Attribute.Add(sophieItem.Attribute3);
@@ -180,15 +195,18 @@ namespace AtelierLaDiDa.DataBases
                         }
                     }
                     break;
+
                 case EnumSeriesName.A20_Atelier_Lulua:
                     using (var db = new AtelierLaDiDaA20SqliteDB("A20DB"))
                     {
                         var query = db.Lulua.Select(item => item);
                         foreach (Lulua luluaItem in query)
                         {
-                            CommonItemData itemData = new CommonItemData();
-                            itemData.Name = luluaItem.Name;
-                            itemData.ID = Convert.ToInt32(luluaItem.No);
+                            CommonItemData itemData = new CommonItemData
+                            {
+                                Name = luluaItem.Name,
+                                ID = Convert.ToInt32(luluaItem.No)
+                            };
                             itemData.Attribute.Add(luluaItem.Attribute1);
                             itemData.Attribute.Add(luluaItem.Attribute2);
                             itemData.Attribute.Add(luluaItem.Attribute3);
@@ -210,15 +228,18 @@ namespace AtelierLaDiDa.DataBases
                         }
                     }
                     break;
+
                 case EnumSeriesName.A21_Atelier_Ryza:
                     using (var db = new AtelierLaDiDaA21SqliteDB("A21DB"))
                     {
                         var query = db.Ryza.Select(item => item);
                         foreach (Ryza ryzaItem in query)
                         {
-                            CommonItemData itemData = new CommonItemData();
-                            itemData.Name = ryzaItem.Name;
-                            itemData.ID = Convert.ToInt32(ryzaItem.No);
+                            CommonItemData itemData = new CommonItemData
+                            {
+                                Name = ryzaItem.Name,
+                                ID = Convert.ToInt32(ryzaItem.No)
+                            };
                             itemData.Attribute.Add(ryzaItem.Attribute1);
                             itemData.Attribute.Add(ryzaItem.Attribute2);
                             itemData.Attribute.Add(ryzaItem.Attribute3);
@@ -240,37 +261,42 @@ namespace AtelierLaDiDa.DataBases
                         }
                     }
                     break;
+
                 default:
                     break;
             }
         }
+
         /// <summary>
         /// 生成物品清單
         /// </summary>
         /// <returns>物品清單</returns>
-        public List<string> generateObjectList() => itemDatas.Select(item => item.Name).ToList();
+        public List<string> GenerateObjectList() => itemDatas.Select(item => item.Name).ToList();
+
         /// <summary>
         /// 生成日文物品清單
         /// </summary>
         /// <returns>物品清單</returns>
-        public List<string> generateJapaneseObjectList() => itemDatas.Select(item => item.JapaneseName).ToList();
+        public List<string> GenerateJapaneseObjectList() => itemDatas.Select(item => item.JapaneseName).ToList();
+
         /// <summary>
         /// 生成物品類型清單
         /// </summary>
         /// <returns>物品類型清單</returns>
-        public List<string> generatrTypeList()
+        public List<string> GeneratrTypeList()
         {
             List<string> returnValue = new List<string>();
             foreach (CommonItemData item in itemDatas)
                 returnValue.AddRange(item.Type.Where(str => str != null));
             return returnValue.Distinct().ToList();
         }
+
         /// <summary>
         /// 顯示物品詳細資料
         /// </summary>
         /// <param name="itemName"></param>
         /// <returns></returns>
-        public string showItemDetail(string itemName)
+        public string ShowItemDetail(string itemName)
         {
             CommonItemData target = itemDatas.Where(item => item.Name == itemName).FirstOrDefault();
             string returnValue = "";
@@ -288,23 +314,29 @@ namespace AtelierLaDiDa.DataBases
                     returnValue += $"Source:{a}\r\n";
             return returnValue;
         }
+
         /// <summary>
         /// 特性轉移路徑查詢
         /// </summary>
         /// <param name="sourceItem"></param>
         /// <param name="destinationItem"></param>
-        public string search(string sourceItem, string destinationItem)
+        public string Search(string sourceItem, string destinationItem)
         {
             CommonItemData sourceItemData = itemDatas.Single(item => item.Name == sourceItem);
             CommonItemData destinationItemData = itemDatas.Single(item => item.Name == destinationItem);
             string returnValue = "";
+
             #region 1st Level
+
             bool firstLevelMatchName = destinationItemData.Source.Any(source => source == sourceItemData.Name);
             bool firstLevelMatchType = destinationItemData.Source.Any(source => source != null && sourceItemData.Type.Contains(source));
             if (firstLevelMatchName || firstLevelMatchType)
                 returnValue += $"First Level:\r\n{sourceItem}-->{destinationItem}";
-            #endregion
+
+            #endregion 1st Level
+
             #region 2nd Level
+
             var secondLevelItem = itemDatas.Where(item =>
             {
                 if (destinationItemData.Source.Contains(item.Name))
@@ -321,8 +353,11 @@ namespace AtelierLaDiDa.DataBases
                 if (secondLevelMatchName || secondLevelMatchType)
                     returnValue += $"\r\nSecond Level:\r\n{sourceItem}-->{itemData.Name}-->{destinationItem}";
             }
-            #endregion
+
+            #endregion 2nd Level
+
             #region 3rd Level
+
             List<CommonItemData> thirdLevelItem = new List<CommonItemData>();
             foreach (CommonItemData secondItem in secondLevelItem)
             {
@@ -345,28 +380,35 @@ namespace AtelierLaDiDa.DataBases
                     if (thirdLevelMatchName || thirdLevelMatchType)
                         returnValue += $"\r\nThird Level:\r\n{sourceItem}-->{itemData.Name}-->{secondItem.Name}-->{destinationItem}";
                 }
-
             }
-            #endregion
+
+            #endregion 3rd Level
+
             return returnValue;
         }
+
         /// <summary>
         /// 特性轉移路徑查詢(日文)
         /// </summary>
         /// <param name="sourceItem"></param>
         /// <param name="destinationItem"></param>
-        public string searchInJapanese(string sourceItem, string destinationItem)
+        public string SearchInJapanese(string sourceItem, string destinationItem)
         {
             CommonItemData sourceItemData = itemDatas.Single(item => item.JapaneseName == sourceItem);
             CommonItemData destinationItemData = itemDatas.Single(item => item.JapaneseName == destinationItem);
             string returnValue = "";
+
             #region 1st Level
+
             bool firstLevelMatchName = destinationItemData.Source.Any(source => source == sourceItemData.Name);
             bool firstLevelMatchType = destinationItemData.Source.Any(source => source != null && sourceItemData.Type.Contains(source));
             if (firstLevelMatchName || firstLevelMatchType)
                 returnValue += $"First Level:\r\n{sourceItem}-->{destinationItem}";
-            #endregion
+
+            #endregion 1st Level
+
             #region 2nd Level
+
             var secondLevelItem = itemDatas.Where(item =>
             {
                 if (destinationItemData.Source.Contains(item.Name))
@@ -383,8 +425,11 @@ namespace AtelierLaDiDa.DataBases
                 if (secondLevelMatchName || secondLevelMatchType)
                     returnValue += $"\r\nSecond Level:\r\n{sourceItem}-->{itemData.JapaneseName}-->{destinationItem}";
             }
-            #endregion
+
+            #endregion 2nd Level
+
             #region 3rd Level
+
             List<CommonItemData> thirdLevelItem = new List<CommonItemData>();
             foreach (CommonItemData secondItem in secondLevelItem)
             {
@@ -407,17 +452,19 @@ namespace AtelierLaDiDa.DataBases
                     if (thirdLevelMatchName || thirdLevelMatchType)
                         returnValue += $"\r\nThird Level:\r\n{sourceItem}-->{itemData.JapaneseName}-->{secondItem.JapaneseName}-->{destinationItem}";
                 }
-
             }
-            #endregion
+
+            #endregion 3rd Level
+
             return returnValue;
         }
+
         /// <summary>
         /// 找包含原料包含目標類型的物品
         /// </summary>
         /// <param name="target"></param>
         /// <returns></returns>
-        public string searchSource(string target)
+        public string SearchSource(string target)
         {
             string returnValue = "";
             var q = itemDatas.Where(item => item.Source.Contains(target));
@@ -425,12 +472,13 @@ namespace AtelierLaDiDa.DataBases
                 returnValue += s.Name + "\r\n";
             return returnValue;
         }
+
         /// <summary>
         /// 找該類別的物品
         /// </summary>
         /// <param name="target"></param>
         /// <returns></returns>
-        public string searchType(string target)
+        public string SearchType(string target)
         {
             string returnValue = "";
             var q = itemDatas.Where(item => item.Type.Contains(target));
@@ -439,6 +487,7 @@ namespace AtelierLaDiDa.DataBases
             return returnValue;
         }
     }
+
     /// <summary>
     /// 物品類別
     /// </summary>
@@ -448,32 +497,35 @@ namespace AtelierLaDiDa.DataBases
         /// ID
         /// </summary>
         public int ID { get; set; }
+
         /// <summary>
         /// 名稱
         /// </summary>
         public string Name { get; set; }
+
         /// <summary>
         /// 日文名稱
         /// </summary>
         public string JapaneseName { get; set; }
+
         /// <summary>
         /// 英文名稱
         /// </summary>
         public string EnglishName { get; set; }
+
         /// <summary>
         /// 屬性
         /// </summary>
         public List<string> Attribute { get; set; } = new List<string>();
+
         /// <summary>
         /// 類型
         /// </summary>
         public List<string> Type { get; set; } = new List<string>();
+
         /// <summary>
         /// 原料
         /// </summary>
         public List<string> Source { get; set; } = new List<string>();
     }
 }
-
-
-

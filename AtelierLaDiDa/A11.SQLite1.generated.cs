@@ -10,6 +10,7 @@
 using System;
 
 using LinqToDB;
+using LinqToDB.Configuration;
 using LinqToDB.Mapping;
 
 namespace AtelierLaDiDa.DataBases
@@ -31,6 +32,20 @@ namespace AtelierLaDiDa.DataBases
 
 		public AtelierLaDiDaA11SqliteDB(string configuration)
 			: base(configuration)
+		{
+			InitDataContext();
+			InitMappingSchema();
+		}
+
+		public AtelierLaDiDaA11SqliteDB(LinqToDbConnectionOptions options)
+			: base(options)
+		{
+			InitDataContext();
+			InitMappingSchema();
+		}
+
+		public AtelierLaDiDaA11SqliteDB(LinqToDbConnectionOptions<AtelierLaDiDaA11SqliteDB> options)
+			: base(options)
 		{
 			InitDataContext();
 			InitMappingSchema();
