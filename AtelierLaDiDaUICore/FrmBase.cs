@@ -60,11 +60,13 @@ namespace AtelierLaDiDaUICore
         }
 
         /// <summary>
-        /// 目前只有A11 A12 A17支援日文
+        /// 目前A11 A12 A17 A20 A21皆支援日文。
+        /// A20 日文資料有欠缺，標示為"欠如"。
         /// </summary>
         private void JapanesSettingReset()
         {
-            if (cbxSeriesName.Text != "A11" && cbxSeriesName.Text != "A12" && cbxSeriesName.Text != "A17")
+            //不支援日文的項目進到if裡面
+            if (false)
             {
                 chbxJapanese.Checked = false;
                 chbxJapanese.Enabled = false;
