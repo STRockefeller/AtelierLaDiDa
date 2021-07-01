@@ -1,6 +1,6 @@
 ﻿{
    "CodeGenerationMode": 0,
-   "ContextClassName": "DProjectsAtelierladidaAtelierladidadatabaseDatabasesAtelierladidaDbContext",
+   "ContextClassName": "AtelierLaDiDaDbContext",
    "ContextNamespace": null,
    "DefaultDacpacSchema": null,
    "FilterSchemas": false,
@@ -26,15 +26,27 @@
          "ObjectType": 0
       },
       {
-         "Name": "Lulua",
-         "ObjectType": 0
-      },
-      {
          "Name": "Ryza",
          "ObjectType": 0
       },
       {
          "Name": "Ayesha",
+         "ObjectType": 0
+      },
+      {
+         "Name": "Firis",
+         "ObjectType": 0
+      },
+      {
+         "Name": "LydieSuelle",
+         "ObjectType": 0
+      },
+      {
+         "Name": "Lulua",
+         "ObjectType": 0
+      },
+      {
+         "Name": "EschaLogy",
          "ObjectType": 0
       }
    ],

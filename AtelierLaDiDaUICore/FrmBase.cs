@@ -43,9 +43,24 @@ namespace AtelierLaDiDaUICore
                     seriesName = EnumSeriesName.A14_Atelier_Ayesha;
                     break;
 
+                case "A15":
+                    lblSeriesName.Text = "エスカ&ロジーのアトリエ 〜黄昏の空の錬金術士〜";
+                    seriesName = EnumSeriesName.A15_Atelier_EschaLogy;
+                    break;
+
                 case "A17":
                     lblSeriesName.Text = "ソフィーのアトリエ ～不思議な本の錬金術士～";
                     seriesName = EnumSeriesName.A17_Atelier_Sophie;
+                    break;
+
+                case "A18":
+                    lblSeriesName.Text = "フィリスのアトリエ 〜不思議な旅の錬金術士〜";
+                    seriesName = EnumSeriesName.A18_Atelier_Firis;
+                    break;
+
+                case "A19":
+                    lblSeriesName.Text = "リディー&スールのアトリエ 〜不思議な絵画の錬金術士〜";
+                    seriesName = EnumSeriesName.A19_Atelier_LydieSuelle;
                     break;
 
                 case "A20":
@@ -65,7 +80,7 @@ namespace AtelierLaDiDaUICore
         }
 
         /// <summary>
-        /// 目前A11 A12 A14 A17 A20 A21皆支援日文。
+        /// 目前所有遊戲版本都支援日文。
         /// A20 日文資料有欠缺，標示為"欠如"。
         /// </summary>
         private void JapanesSettingReset()
@@ -329,10 +344,16 @@ namespace AtelierLaDiDaUICore
 
         private void FrmBase_Load(object sender, EventArgs e)
         {
+            cbxTheme.Items.Add("Default");
+            cbxTheme.Items.Add("Dark");
+            cbxTheme.Text = "Default";
             cbxSeriesName.Items.Add("A11");
             cbxSeriesName.Items.Add("A12");
             cbxSeriesName.Items.Add("A14");
+            cbxSeriesName.Items.Add("A15");
             cbxSeriesName.Items.Add("A17");
+            cbxSeriesName.Items.Add("A18");
+            cbxSeriesName.Items.Add("A19");
             cbxSeriesName.Items.Add("A20");
             cbxSeriesName.Items.Add("A21");
             //to update
@@ -399,6 +420,20 @@ namespace AtelierLaDiDaUICore
             tbxResult.Clear();
             tbxResult.Text += chbxJapanese.Checked ?
                 SearchInJapanese(cbxSource.Text, cbxDestination.Text) : Search(cbxSource.Text, cbxDestination.Text);
+        }
+
+        private void CbxTheme_Changed(object sender, EventArgs e)
+        {
+            switch (cbxTheme.Text)
+            {
+                case "Dark":
+                    Theme.ChangeTheme(this, enumTheme.Dark);
+                    break;
+
+                default:
+                    Theme.ChangeTheme(this, enumTheme.Default);
+                    break;
+            }
         }
 
         #endregion 有關表單的部分

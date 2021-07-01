@@ -33,10 +33,19 @@ namespace AtelierLaDiDaDatabase
                     res = db.Totori.Select(t => (IAtelier)t).ToList();
                     break;
                 case EnumSeriesName.A14_Atelier_Ayesha:
-                    res = db.Ayesha.Select(t => (IAtelier)t).ToList();
+                    res = db.Ayesha.Select(a => (IAtelier)a).ToList();
+                    break;
+                case EnumSeriesName.A15_Atelier_EschaLogy:
+                    res = db.EschaLogy.Select(e => (IAtelier)e).ToList();
                     break;
                 case EnumSeriesName.A17_Atelier_Sophie:
                     res = db.Sophie.Select(s => (IAtelier)s).ToList();
+                    break;
+                case EnumSeriesName.A18_Atelier_Firis:
+                    res = db.Firis.Select(f => (IAtelier)f).ToList();
+                    break;
+                case EnumSeriesName.A19_Atelier_LydieSuelle:
+                    res = db.LydieSuelle.Select(l => (IAtelier)l).ToList();
                     break;
                 case EnumSeriesName.A20_Atelier_Lulua:
                     res = db.Lulua.Select(l => (IAtelier)l).ToList();
@@ -79,6 +88,11 @@ namespace AtelierLaDiDaDatabase
         A14_Atelier_Ayesha = 14,
 
         /// <summary>
+        /// エスカ&ロジーのアトリエ 〜黄昏の空の錬金術士〜
+        /// </summary>
+        A15_Atelier_EschaLogy = 15,
+
+        /// <summary>
         /// ソフィーのアトリエ ～不思議な本の錬金術士～
         /// </summary>
         A17_Atelier_Sophie = 17,
@@ -91,7 +105,7 @@ namespace AtelierLaDiDaDatabase
         /// <summary>
         /// リディー＆スールのアトリエ ～不思議な絵画の錬金術士～
         /// </summary>
-        A19_Atelier_Lydie_and_Suelle = 19,
+        A19_Atelier_LydieSuelle = 19,
 
         /// <summary>
         /// ルルアのアトリエ ～アーランドの錬金術士 4～

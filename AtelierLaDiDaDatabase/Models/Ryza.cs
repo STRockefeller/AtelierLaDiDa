@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace AtelierLaDiDaDatabase.Models
 {
-    public partial class Ryza:IAtelier
+    public partial class Ryza : IAtelier
     {
         public double No { get; set; }
         public string Name { get; set; }
