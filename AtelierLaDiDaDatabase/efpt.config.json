@@ -32,6 +32,10 @@
       {
          "Name": "Ryza",
          "ObjectType": 0
+      },
+      {
+         "Name": "Ayesha",
+         "ObjectType": 0
       }
    ],
    "UiHint": "AtelierLaDiDaDB",

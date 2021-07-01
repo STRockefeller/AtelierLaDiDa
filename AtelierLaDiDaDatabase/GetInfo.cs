@@ -32,6 +32,9 @@ namespace AtelierLaDiDaDatabase
                 case EnumSeriesName.A12_Atelier_Totori:
                     res = db.Totori.Select(t => (IAtelier)t).ToList();
                     break;
+                case EnumSeriesName.A14_Atelier_Ayesha:
+                    res = db.Ayesha.Select(t => (IAtelier)t).ToList();
+                    break;
                 case EnumSeriesName.A17_Atelier_Sophie:
                     res = db.Sophie.Select(s => (IAtelier)s).ToList();
                     break;
@@ -69,6 +72,11 @@ namespace AtelierLaDiDaDatabase
         /// トトリのアトリエ ～アーランドの錬金術士2～
         /// </summary>
         A12_Atelier_Totori = 12,
+
+        /// <summary>
+        /// アーシャのアトリエ 〜黄昏の大地の錬金術士〜
+        /// </summary>
+        A14_Atelier_Ayesha = 14,
 
         /// <summary>
         /// ソフィーのアトリエ ～不思議な本の錬金術士～

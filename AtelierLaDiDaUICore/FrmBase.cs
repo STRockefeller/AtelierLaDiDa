@@ -38,6 +38,11 @@ namespace AtelierLaDiDaUICore
                     seriesName = EnumSeriesName.A12_Atelier_Totori;
                     break;
 
+                case "A14":
+                    lblSeriesName.Text = "アーシャのアトリエ 〜黄昏の大地の錬金術士〜";
+                    seriesName = EnumSeriesName.A14_Atelier_Ayesha;
+                    break;
+
                 case "A17":
                     lblSeriesName.Text = "ソフィーのアトリエ ～不思議な本の錬金術士～";
                     seriesName = EnumSeriesName.A17_Atelier_Sophie;
@@ -60,7 +65,7 @@ namespace AtelierLaDiDaUICore
         }
 
         /// <summary>
-        /// 目前A11 A12 A17 A20 A21皆支援日文。
+        /// 目前A11 A12 A14 A17 A20 A21皆支援日文。
         /// A20 日文資料有欠缺，標示為"欠如"。
         /// </summary>
         private void JapanesSettingReset()
@@ -326,6 +331,7 @@ namespace AtelierLaDiDaUICore
         {
             cbxSeriesName.Items.Add("A11");
             cbxSeriesName.Items.Add("A12");
+            cbxSeriesName.Items.Add("A14");
             cbxSeriesName.Items.Add("A17");
             cbxSeriesName.Items.Add("A20");
             cbxSeriesName.Items.Add("A21");
