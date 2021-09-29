@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Drawing;
 using System.Windows.Forms;
-using System.Drawing;
 
 namespace AtelierLaDiDaUICore
 {
@@ -15,7 +12,7 @@ namespace AtelierLaDiDaUICore
         internal Color ResultBackGroundColor;
     }
 
-    internal enum enumTheme
+    internal enum EnumTheme
     {
         Default,
         Dark
@@ -23,13 +20,13 @@ namespace AtelierLaDiDaUICore
 
     internal class Theme
     {
-        public static void ChangeTheme(Form form, enumTheme theme)
+        public static void ChangeTheme(Form form, EnumTheme theme)
         {
             var container = form.Controls;
             ThemeColor color;
             switch (theme)
             {
-                case enumTheme.Dark:
+                case EnumTheme.Dark:
                     color.ForeColor = Color.White;
                     color.BackgroundColor = Color.Black;
                     color.TextBoxBackground = Color.DarkGray;

@@ -1,15 +1,17 @@
-﻿using System.Data;
-using AtelierLaDiDaDatabase.Data;
-using System.Linq;
+﻿using AtelierLaDiDaDatabase.Data;
 using System.Collections.Generic;
+using System.Data;
+using System.Linq;
 
 namespace AtelierLaDiDaDatabase
 {
     public class Parameters
     {
         internal static string DBPath = "";
-        public static void SetDBPath(string path) => DBPath = "Data Source="+path;
+
+        public static void SetDBPath(string path) => DBPath = "Data Source=" + path;
     }
+
     /// <summary>
     /// 對外提供資料庫資訊的類別
     /// </summary>
@@ -22,44 +24,23 @@ namespace AtelierLaDiDaDatabase
         /// <returns></returns>
         public static List<IAtelier> GetItemInfo(EnumSeriesName seriesName)
         {
-            List<IAtelier> res;
             AtelierLaDiDaDbContext db = new AtelierLaDiDaDbContext();
-            switch (seriesName)
+            List<IAtelier> res = seriesName switch
             {
-                case EnumSeriesName.A11_Atelier_Rorona:
-                    res = db.Rorona.Select(r => (IAtelier)r).ToList();
-                    break;
-                case EnumSeriesName.A12_Atelier_Totori:
-                    res = db.Totori.Select(t => (IAtelier)t).ToList();
-                    break;
-                case EnumSeriesName.A14_Atelier_Ayesha:
-                    res = db.Ayesha.Select(a => (IAtelier)a).ToList();
-                    break;
-                case EnumSeriesName.A15_Atelier_EschaLogy:
-                    res = db.EschaLogy.Select(e => (IAtelier)e).ToList();
-                    break;
-                case EnumSeriesName.A17_Atelier_Sophie:
-                    res = db.Sophie.Select(s => (IAtelier)s).ToList();
-                    break;
-                case EnumSeriesName.A18_Atelier_Firis:
-                    res = db.Firis.Select(f => (IAtelier)f).ToList();
-                    break;
-                case EnumSeriesName.A19_Atelier_LydieSuelle:
-                    res = db.LydieSuelle.Select(l => (IAtelier)l).ToList();
-                    break;
-                case EnumSeriesName.A20_Atelier_Lulua:
-                    res = db.Lulua.Select(l => (IAtelier)l).ToList();
-                    break;
-                case EnumSeriesName.A21_Atelier_Ryza:
-                    res = db.Ryza.Select(r => (IAtelier)r).ToList();
-                    break;
-                default:
-                    res = new List<IAtelier>();
-                    //error log
-                    break;
-            }
+                EnumSeriesName.A11_Atelier_Rorona => db.Rorona.Select(r => (IAtelier)r).ToList(),
+                EnumSeriesName.A12_Atelier_Totori => db.Totori.Select(t => (IAtelier)t).ToList(),
+                EnumSeriesName.A14_Atelier_Ayesha => db.Ayesha.Select(a => (IAtelier)a).ToList(),
+                EnumSeriesName.A15_Atelier_EschaLogy => db.EschaLogy.Select(e => (IAtelier)e).ToList(),
+                EnumSeriesName.A17_Atelier_Sophie => db.Sophie.Select(s => (IAtelier)s).ToList(),
+                EnumSeriesName.A18_Atelier_Firis => db.Firis.Select(f => (IAtelier)f).ToList(),
+                EnumSeriesName.A19_Atelier_LydieSuelle => db.LydieSuelle.Select(l => (IAtelier)l).ToList(),
+                EnumSeriesName.A20_Atelier_Lulua => db.Lulua.Select(l => (IAtelier)l).ToList(),
+                EnumSeriesName.A21_Atelier_Ryza => db.Ryza.Select(r => (IAtelier)r).ToList(),
+                _ => new List<IAtelier>(),
+            };
             return res;
         }
+
         /// <summary>
         /// 取得所有資料
         /// </summary>

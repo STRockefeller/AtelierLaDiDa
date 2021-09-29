@@ -1,20 +1,18 @@
-﻿using NUnit.Framework;
-using AtelierLaDiDaDatabase;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using AtelierLaDiDaDatabase;
 using AtelierLaDiDaDatabase.Models;
+using NUnit.Framework;
+using System.Collections.Generic;
 
 namespace AtelierLaDiDaTest
 {
     [TestFixture]
-    class AtelierLaDiDaDatabaseTest
+    internal class AtelierLaDiDaDatabaseTest
     {
         [SetUp]
         public void Startup()
         {
-
         }
+
         /// <summary>
         /// 測試資料取得-A11
         /// </summary>
@@ -24,14 +22,15 @@ namespace AtelierLaDiDaTest
             List<IAtelier> rorona = GetInfo.GetItemInfo(AtelierLaDiDaDatabase.EnumSeriesName.A11_Atelier_Rorona);
 
             var actual = rorona[0] as Rorona;
-            var expected = new Rorona() { Japanese= "ニューズ",Name= "針木果實",No=1,Type1= "植物類",Type2= "中和劑"};
+            var expected = new Rorona() { Japanese = "ニューズ", Name = "針木果實", No = 1, Type1 = "植物類", Type2 = "中和劑" };
 
             Assert.AreEqual(expected.No, actual.No);
-            Assert.AreEqual(expected.Name,actual.Name);
+            Assert.AreEqual(expected.Name, actual.Name);
             Assert.AreEqual(expected.Japanese, actual.Japanese);
             Assert.AreEqual(expected.Type1, actual.Type1);
             Assert.AreEqual(expected.Type2, actual.Type2);
         }
+
         /// <summary>
         /// 測試資料取得-A12
         /// </summary>
@@ -41,11 +40,12 @@ namespace AtelierLaDiDaTest
             List<IAtelier> totori = GetInfo.GetItemInfo(AtelierLaDiDaDatabase.EnumSeriesName.A12_Atelier_Totori);
 
             var actual = totori[2] as Totori;
-            var expect = new Totori() { Name= "橡木" ,No=3};
+            var expect = new Totori() { Name = "橡木", No = 3 };
 
             Assert.AreEqual(expect.No, actual.No);
             Assert.AreEqual(expect.Name, actual.Name);
         }
+
         /// <summary>
         /// 測試資料取得-A17
         /// </summary>
@@ -56,10 +56,11 @@ namespace AtelierLaDiDaTest
 
             var actual = sophie[22] as Sophie;
             var expect = new Sophie() { Name = "妖精的土丸子", No = 23 };
-            
+
             Assert.AreEqual(expect.No, actual.No);
             Assert.AreEqual(expect.Name, actual.Name);
         }
+
         /// <summary>
         /// 測試資料取得-A20
         /// </summary>
@@ -74,6 +75,7 @@ namespace AtelierLaDiDaTest
             Assert.AreEqual(expect.No, actual.No);
             Assert.AreEqual(expect.Name, actual.Name);
         }
+
         /// <summary>
         /// 測試資料取得-A21
         /// </summary>

@@ -1,5 +1,4 @@
-﻿
-namespace AtelierLaDiDaDatabase
+﻿namespace AtelierLaDiDaDatabase
 {
     public interface IAtelier
     {

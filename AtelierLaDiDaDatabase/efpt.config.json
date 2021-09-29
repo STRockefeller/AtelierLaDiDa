@@ -1,68 +1,68 @@
 ﻿{
-   "CodeGenerationMode": 0,
-   "ContextClassName": "AtelierLaDiDaDbContext",
-   "ContextNamespace": null,
-   "DefaultDacpacSchema": null,
-   "FilterSchemas": false,
-   "IncludeConnectionString": true,
-   "ModelNamespace": null,
-   "OutputContextPath": "Data",
-   "OutputPath": "Models",
-   "ProjectRootNamespace": "AtelierLaDiDaDatabase",
-   "Schemas": null,
-   "SelectedHandlebarsLanguage": 0,
-   "SelectedToBeGenerated": 0,
-   "Tables": [
-      {
-         "Name": "Rorona",
-         "ObjectType": 0
-      },
-      {
-         "Name": "Totori",
-         "ObjectType": 0
-      },
-      {
-         "Name": "Sophie",
-         "ObjectType": 0
-      },
-      {
-         "Name": "Ryza",
-         "ObjectType": 0
-      },
-      {
-         "Name": "Ayesha",
-         "ObjectType": 0
-      },
-      {
-         "Name": "Firis",
-         "ObjectType": 0
-      },
-      {
-         "Name": "LydieSuelle",
-         "ObjectType": 0
-      },
-      {
-         "Name": "Lulua",
-         "ObjectType": 0
-      },
-      {
-         "Name": "EschaLogy",
-         "ObjectType": 0
-      }
-   ],
-   "UiHint": "AtelierLaDiDaDB",
-   "UseBoolPropertiesWithoutDefaultSql": false,
-   "UseDatabaseNames": false,
-   "UseDbContextSplitting": false,
-   "UseFluentApiOnly": true,
-   "UseHandleBars": false,
-   "UseInflector": false,
-   "UseLegacyPluralizer": false,
-   "UseNoConstructor": false,
-   "UseNoNavigations": false,
-   "UseNoObjectFilter": false,
-   "UseNodaTime": false,
-   "UseNullableReferences": false,
-   "UseSchemaFolders": false,
-   "UseSpatial": false
+  "CodeGenerationMode": 0,
+  "ContextClassName": "AtelierLaDiDaDbContext",
+  "ContextNamespace": null,
+  "DefaultDacpacSchema": null,
+  "FilterSchemas": false,
+  "IncludeConnectionString": true,
+  "ModelNamespace": null,
+  "OutputContextPath": "Data",
+  "OutputPath": "Models",
+  "ProjectRootNamespace": "AtelierLaDiDaDatabase",
+  "Schemas": null,
+  "SelectedHandlebarsLanguage": 0,
+  "SelectedToBeGenerated": 0,
+  "Tables": [
+    {
+      "Name": "Rorona",
+      "ObjectType": 0
+    },
+    {
+      "Name": "Totori",
+      "ObjectType": 0
+    },
+    {
+      "Name": "Sophie",
+      "ObjectType": 0
+    },
+    {
+      "Name": "Ryza",
+      "ObjectType": 0
+    },
+    {
+      "Name": "Ayesha",
+      "ObjectType": 0
+    },
+    {
+      "Name": "Firis",
+      "ObjectType": 0
+    },
+    {
+      "Name": "LydieSuelle",
+      "ObjectType": 0
+    },
+    {
+      "Name": "Lulua",
+      "ObjectType": 0
+    },
+    {
+      "Name": "EschaLogy",
+      "ObjectType": 0
+    }
+  ],
+  "UiHint": "AtelierLaDiDaDB",
+  "UseBoolPropertiesWithoutDefaultSql": false,
+  "UseDatabaseNames": false,
+  "UseDbContextSplitting": false,
+  "UseFluentApiOnly": true,
+  "UseHandleBars": false,
+  "UseInflector": false,
+  "UseLegacyPluralizer": false,
+  "UseNoConstructor": false,
+  "UseNoNavigations": false,
+  "UseNoObjectFilter": false,
+  "UseNodaTime": false,
+  "UseNullableReferences": false,
+  "UseSchemaFolders": false,
+  "UseSpatial": false
 }

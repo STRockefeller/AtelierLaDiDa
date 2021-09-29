@@ -1,7 +1,6 @@
-﻿using System;
+﻿using AtelierLaDiDaDatabase;
+using System;
 using System.Collections.Generic;
-using System.Text;
-using AtelierLaDiDaDatabase;
 
 namespace AtelierLaDiDaUICore
 {
@@ -47,6 +46,7 @@ namespace AtelierLaDiDaUICore
                 Source.Add(atelier.Source4);
             return this;
         }
+
         /// <summary>
         /// ID
         /// </summary>

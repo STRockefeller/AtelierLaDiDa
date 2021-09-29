@@ -1,9 +1,9 @@
-﻿using System;
-using System.Windows.Forms;
-using AtelierLaDiDaDatabase;
+﻿using AtelierLaDiDaDatabase;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace AtelierLaDiDaUICore
 {
@@ -85,7 +85,7 @@ namespace AtelierLaDiDaUICore
         /// </summary>
         private void JapanesSettingReset()
         {
-            //不支援日文的項目進到if裡面
+            //不支援日文的項目進到if裡面 (目前沒有)
             if (false)
             {
                 chbxJapanese.Checked = false;
@@ -427,11 +427,11 @@ namespace AtelierLaDiDaUICore
             switch (cbxTheme.Text)
             {
                 case "Dark":
-                    Theme.ChangeTheme(this, enumTheme.Dark);
+                    Theme.ChangeTheme(this, EnumTheme.Dark);
                     break;
 
                 default:
-                    Theme.ChangeTheme(this, enumTheme.Default);
+                    Theme.ChangeTheme(this, EnumTheme.Default);
                     break;
             }
         }
