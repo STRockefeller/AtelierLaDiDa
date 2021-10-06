@@ -18,7 +18,7 @@ namespace AtelierLaDiDaUICore
         private List<IAtelier> oldData;
         private EnumSeriesName seriesName;
 
-        private void SetDBPath()
+        private static void SetDBPath()
         {
             string path = Directory.GetCurrentDirectory() + @"\DataBases\atelierLaDiDa.db";
             Parameters.SetDBPath(path);
@@ -189,7 +189,7 @@ namespace AtelierLaDiDaUICore
 
             #region 3rd Level
 
-            List<CustomData> thirdLevelItem = new List<CustomData>();
+            List<CustomData> thirdLevelItem = new();
             foreach (CustomData secondItem in secondLevelItem)
             {
                 var t = data.Where(item =>
@@ -203,7 +203,7 @@ namespace AtelierLaDiDaUICore
                 });
                 thirdLevelItem.Clear();
                 thirdLevelItem.AddRange(t);
-                thirdLevelItem.Distinct();
+                thirdLevelItem = thirdLevelItem.Distinct().ToList();
                 foreach (CustomData itemData in thirdLevelItem)
                 {
                     bool thirdLevelMatchName = itemData.Source.Any(source => source == sourceItemData.Name);
@@ -261,7 +261,7 @@ namespace AtelierLaDiDaUICore
 
             #region 3rd Level
 
-            List<CustomData> thirdLevelItem = new List<CustomData>();
+            List<CustomData> thirdLevelItem = new();
             foreach (CustomData secondItem in secondLevelItem)
             {
                 var t = data.Where(item =>
@@ -275,7 +275,7 @@ namespace AtelierLaDiDaUICore
                 });
                 thirdLevelItem.Clear();
                 thirdLevelItem.AddRange(t);
-                thirdLevelItem.Distinct();
+                thirdLevelItem = thirdLevelItem.Distinct().ToList();
                 foreach (CustomData itemData in thirdLevelItem)
                 {
                     bool thirdLevelMatchName = itemData.Source.Any(source => source == sourceItemData.Name);
@@ -324,7 +324,7 @@ namespace AtelierLaDiDaUICore
         /// <returns>物品類型清單</returns>
         private List<string> GeneraterTypeList()
         {
-            List<string> returnValue = new List<string>();
+            List<string> returnValue = new();
             foreach (CustomData item in data)
                 returnValue.AddRange(item.Type.Where(str => str != null));
             return returnValue.Distinct().ToList();

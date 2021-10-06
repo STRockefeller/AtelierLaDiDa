@@ -24,7 +24,7 @@ namespace AtelierLaDiDaDatabase
         /// <returns></returns>
         public static List<IAtelier> GetItemInfo(EnumSeriesName seriesName)
         {
-            AtelierLaDiDaDbContext db = new AtelierLaDiDaDbContext();
+            AtelierLaDiDaDbContext db = new();
             List<IAtelier> res = seriesName switch
             {
                 EnumSeriesName.A11_Atelier_Rorona => db.Rorona.Select(r => (IAtelier)r).ToList(),
@@ -45,7 +45,7 @@ namespace AtelierLaDiDaDatabase
         /// 取得所有資料
         /// </summary>
         /// <returns></returns>
-        public static AtelierLaDiDaDbContext GetAllData() => new AtelierLaDiDaDbContext();
+        public static AtelierLaDiDaDbContext GetAllData() => new();
     }
 
     /// <summary>
